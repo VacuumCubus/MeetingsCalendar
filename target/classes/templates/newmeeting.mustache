@@ -1,0 +1,50 @@
+<html>
+
+<body>
+<div>
+    <form method="post">
+        <input type="text" name="meeting_name" placeholder="Meeting name" />
+        <input type="text" name="description" placeholder="Meeting description">
+        <input type="text" name="full_name" placeholder="FULL NAME">
+        <input type="date" name="date" placeholder="Set a date">
+        <input type="time" name="time" placeholder="Set a time">
+        <input type="time" name="time_duration" placeholder="Duration of your meeting">
+        <button type="submit">Add</button>
+    </form>
+</div>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid #999;
+    padding: 5px;
+}
+</style>
+</head>
+<h2>Meetings</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Meeting name</th>
+        <th>Description</th>
+        <th>FULL NAME</th>
+        <th>Meeting date</th>
+        <th>Meeting timr</th>
+        <th>Time duration</th>
+    </tr>
+    {{#meetings}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{meeting_name}}</td>
+            <td>{{description}}</td>
+            <td>{{full_name}}</td>
+            <td>{{date}}</td>
+            <td>{{time}}</td>
+            <td>{{time_duration}}</td>
+        </tr>
+    {{/meetings}}
+</table>
+</body>
+</html>
